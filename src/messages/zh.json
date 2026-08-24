@@ -26,7 +26,7 @@
     "wms": "WMS",
     "wmsTag": "仓储管理系统",
     "lims": "LIMS",
-    "limsTag": "环境检测实验室信息管理系统",
+    "limsTag": "实验室信息管理系统",
     "icms": "ICMS",
     "icmsTag": "智慧社区管理系统",
     "solutions": "解决方案",
@@ -159,7 +159,7 @@
       "items": [
         {
           "icon": "Layers",
-          "title": "多租户云原生架构",
+          "title": "云原生架构",
           "desc": "容器化部署与租户级隔离，数据互不干扰，升级零感知。"
         },
         {

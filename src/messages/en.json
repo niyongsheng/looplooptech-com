@@ -26,9 +26,9 @@
     "wms": "WMS",
     "wmsTag": "Warehouse Management System",
     "lims": "LIMS",
-    "limsTag": "LIMS for Environmental Testing",
+    "limsTag": "Laboratory Information Management System",
     "icms": "ICMS",
-    "icmsTag": "Smart Community Management",
+    "icmsTag": "Smart Community Management System",
     "solutions": "Solutions",
     "about": "About",
     "cta": "Book a demo",
@@ -159,7 +159,7 @@
       "items": [
         {
           "icon": "Layers",
-          "title": "Multi-tenant cloud native",
+          "title": "Cloud native",
           "desc": "Containerized deployment with tenant-level isolation. Silent upgrades, zero disruption."
         },
         {

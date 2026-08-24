@@ -1,5 +1,5 @@
 # looplooptech-com
-![(logo)](./logo.png)
+<img src="./logo.png" alt="logo" width="200" />
 
 [LoopLoopTech](www.looplooptech.com) 官网
 

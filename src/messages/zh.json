@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "home": {
+      "title": "LoopLoopTech",
+      "description": "LoopLoopTech 提供 WMS 仓储管理系统、LIMS 实验室信息管理系统与 ICMS 智慧社区管理系统三款独立产品，帮助企业实现仓储、检测与社区运营的数字化、可观测与持续优化。"
+    },
+    "wms": {
+      "title": "WMS 仓储管理系统 — LoopLoopTech",
+      "description": "云原生仓储管理系统：智能入库、波次拣选、实时库存、多仓协同与开放 API，让每件货都处于最优路径。"
+    },
+    "lims": {
+      "title": "LIMS 实验室信息管理系统 — LoopLoopTech",
+      "description": "环境检测实验室信息管理系统：样品全生命周期流转、仪器数据自动采集、质控与审计追踪，符合 GLP/GMP/ISO 17025 合规要求。"
+    },
+    "icms": {
+      "title": "ICMS 智慧社区管理系统 — LoopLoopTech",
+      "description": "智慧社区管理系统：房产与住户、门禁通行、停车、物业收费与工单报修一体化管理，让社区运营井然有序。"
+    },
+    "about": {
+      "title": "关于我们 — LoopLoopTech",
+      "description": "LoopLoopTech 是一家专注于仓储、实验室与智慧社区数字化的公司，相信好的软件应该像循环一样持续运转、持续进化。"
+    }
+  },
+  "nav": {
+    "products": "产品",
+    "wms": "WMS",
+    "wmsTag": "仓储管理系统",
+    "lims": "LIMS",
+    "limsTag": "环境检测实验室信息管理系统",
+    "icms": "ICMS",
+    "icmsTag": "智慧社区管理系统",
+    "solutions": "解决方案",
+    "about": "关于我们",
+    "cta": "预约演示",
+    "language": "语言",
+    "theme": "切换主题",
+    "menu": "菜单"
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "bookDemo": "预约演示",
+    "contact": "联系我们",
+    "freeTrial": "免费试用",
+    "copy": "复制",
+    "copied": "已复制",
+    "features": "核心功能",
+    "metrics": "关键指标",
+    "architecture": "技术架构"
+  },
+  "home": {
+    "hero": {
+      "badge": "企业级 SaaS：仓储 · 实验室 · 智慧社区",
+      "titleLead": "让业务，进入",
+      "titleGradient": "智能循环",
+      "subtitle": "LoopLoopTech 提供 WMS、LIMS 与 ICMS 三款独立产品，把每一件货、每一份样本、每一处社区服务纳入可观测、可优化的数字循环——从接入第一天起，持续为你产生回报。",
+      "terminalTitle": "loopctl — 运营控制台",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "loopctl login --tenant acme"
+        },
+        {
+          "kind": "ok",
+          "text": "已认证 · 租户 \"acme\""
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl warehouse status"
+        },
+        {
+          "kind": "info",
+          "text": "WH-01 上海一仓  库存 128,404 SKU  准确率 99.98%"
+        },
+        {
+          "kind": "info",
+          "text": "WH-02 华南仓    库存  86,210 SKU  准确率 99.95%"
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl sample trace LIMS-2026-0842"
+        },
+        {
+          "kind": "ok",
+          "text": "已接收 → 检测中(质谱联用) → 报告已签发"
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl community status"
+        },
+        {
+          "kind": "info",
+          "text": "东湖花园  门禁在线 42/42  本月工单 1,280  满意度 98.6%"
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": 99.99,
+          "suffix": "%",
+          "label": "服务可用性 SLA"
+        },
+        {
+          "value": 500,
+          "suffix": "+",
+          "label": "企业客户"
+        },
+        {
+          "value": 2000,
+          "suffix": "万+",
+          "label": "日均处理单据"
+        },
+        {
+          "value": 30,
+          "suffix": "+",
+          "label": "生态集成"
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "核心产品",
+      "title": "三款独立产品，三类核心场景",
+      "subtitle": "WMS 管仓储、LIMS 管实验室、ICMS 管社区——每款产品独立交付、独立演进，按需选用。",
+      "wms": {
+        "tag": "仓储管理系统",
+        "desc": "从收货上架到波次出库，用实时库存与智能算法，让仓库始终保持最优运转。",
+        "features": [
+          "智能入库与上架推荐",
+          "波次拣选与出库履约",
+          "实时库存与循环盘点",
+          "多仓、多货主协同"
+        ]
+      },
+      "lims": {
+        "tag": "实验室信息管理系统 · 环境检测",
+        "desc": "面向环境检测实验室，从样品登记到报告签发，以完整审计追踪让每次检测都经得起复核。",
+        "features": [
+          "样品全生命周期流转",
+          "仪器数据自动采集",
+          "质控与异常预警",
+          "一键生成检验报告"
+        ]
+      },
+      "icms": {
+        "tag": "智慧社区管理系统",
+        "desc": "从门禁通行到物业工单，把人、车、房与设施纳入一张数字网络，让社区运营井然有序。",
+        "features": [
+          "房产与住户档案",
+          "门禁 / 访客 / 停车管理",
+          "物业收费与工单报修",
+          "设备设施与公告通知"
+        ]
+      }
+    },
+    "capabilities": {
+      "eyebrow": "工程实力",
+      "title": "值得托付的工程承诺",
+      "subtitle": "SaaS 不只是托管，更是可被信赖的工程承诺。",
+      "items": [
+        {
+          "icon": "Layers",
+          "title": "多租户云原生架构",
+          "desc": "容器化部署与租户级隔离，数据互不干扰，升级零感知。"
+        },
+        {
+          "icon": "Braces",
+          "title": "开放 API 优先",
+          "desc": "1200+ REST/GraphQL 接口与 Webhook 事件，与 ERP、TMS、仪器无缝对接。"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "企业级数据安全",
+          "desc": "传输与静态加密、细粒度权限、完整审计日志，符合 SOC 2 要求。"
+        },
+        {
+          "icon": "Scaling",
+          "title": "弹性伸缩",
+          "desc": "大促与检测高峰自动扩容，闲时自动回收，只为用量付费。"
+        },
+        {
+          "icon": "ChartLine",
+          "title": "智能数据分析",
+          "desc": "内置 BI 看板与异常检测，把运营数据变成下一个优化决策。"
+        },
+        {
+          "icon": "Globe2",
+          "title": "全球多区域部署",
+          "desc": "国内多可用区与海外节点就近接入，跨境数据合规可配置。"
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "工作原理",
+      "title": "三步，进入循环",
+      "chapters": [
+        {
+          "no": "01",
+          "title": "接入",
+          "desc": "标准数据模型与迁移工具，一周内完成商品、库存、样品与住户档案导入与流程配置，不打断现有业务。"
+        },
+        {
+          "no": "02",
+          "title": "运行",
+          "desc": "PDA、屏幕与看板多端协同，库内作业、实验室流转与社区运营实时回传，异常自动预警，一切可观测。"
+        },
+        {
+          "no": "03",
+          "title": "增长",
+          "desc": "运营数据持续沉淀为算法燃料：库存布局、拣选路径、检测排程自动优化，越用越聪明。"
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "客户证言",
+      "title": "他们已经在循环中",
+      "items": [
+        {
+          "quote": "切换 WMS 后，大促出库峰值从 8 万单/天扛到了 25 万单/天，库存准确率稳定在 99.9% 以上。",
+          "name": "陈志远",
+          "role": "运营总监",
+          "company": "某头部跨境电商"
+        },
+        {
+          "quote": "审计追踪和电子签名开箱即用，CNAS 复审准备时间缩短了一半，团队终于不用周末补记录了。",
+          "name": "刘 畅",
+          "role": "质量负责人",
+          "company": "第三方检测集团"
+        },
+        {
+          "quote": "上线 ICMS 后，门禁、停车与收费全部打通，物业团队人力节省了三成，业主满意度从 82% 提升到了 96%。",
+          "name": "王慧敏",
+          "role": "物业总监",
+          "company": "某大型住宅社区"
+        }
+      ]
+    },
+    "cta": {
+      "title": "准备好进入智能循环了吗？",
+      "subtitle": "14 天免费试用，或预约一次 30 分钟的产品演示，看看 LoopLoopTech 如何适配你的业务。",
+      "primary": "预约演示",
+      "secondary": "免费试用"
+    }
+  },
+  "wms": {
+    "hero": {
+      "badge": "WMS · 仓储管理系统",
+      "titleLead": "让每件货，都处于",
+      "titleGradient": "最优路径",
+      "subtitle": "智能上架、波次拣选、实时库存与多仓协同——WMS 把仓库的每一次移动，都变成可度量、可优化的数据。",
+      "terminalTitle": "wmsctl — 仓储控制台",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "wmsctl inbound create --asn ASN-88231"
+        },
+        {
+          "kind": "ok",
+          "text": "收货单已创建 · 3 SKU · 1,200 件"
+        },
+        {
+          "kind": "cmd",
+          "text": "wmsctl putaway suggest --zone A"
+        },
+        {
+          "kind": "info",
+          "text": "推荐库位 A-03-02-01 · 距离 42m · 热销区"
+        },
+        {
+          "kind": "ok",
+          "text": "上架完成 · 库位 A-03-02-01 已锁定"
+        },
+        {
+          "kind": "cmd",
+          "text": "wmsctl wave release"
+        },
+        {
+          "kind": "ok",
+          "text": "波次 W-1401 已下发 · 拣选路径优化 -27%"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 99.9,
+          "suffix": "%",
+          "label": "库存准确率"
+        },
+        {
+          "value": 3,
+          "suffix": "×",
+          "label": "出库效率提升"
+        },
+        {
+          "value": 40,
+          "suffix": "%",
+          "label": "运营成本下降"
+        },
+        {
+          "value": 1000,
+          "suffix": "+",
+          "label": "兼容条码/RFID 设备"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "功能矩阵",
+      "title": "覆盖仓储运营全链路",
+      "subtitle": "从首件上架到末件出库，每个环节都有对应的模块与策略引擎。",
+      "items": [
+        {
+          "icon": "PackagePlus",
+          "title": "入库管理",
+          "desc": "ASN 预约、质检拦截、智能上架推荐，收货即上架决策。"
+        },
+        {
+          "icon": "Truck",
+          "title": "出库履约",
+          "desc": "波次策略、路径优化、复核打包与承运商对接，全流程无纸化。"
+        },
+        {
+          "icon": "Boxes",
+          "title": "库存精准",
+          "desc": "批次、序列号与效期多维库存，动态安全库存与呆滞预警。"
+        },
+        {
+          "icon": "ClipboardCheck",
+          "title": "盘点与波次",
+          "desc": "循环盘点不锁仓，波次按时效与承运商自动编排。"
+        },
+        {
+          "icon": "ChartBar",
+          "title": "报表分析",
+          "desc": "人效、库容、履约时效看板，异常指标自动归因下钻。"
+        },
+        {
+          "icon": "Plug",
+          "title": "开放集成",
+          "desc": "标准 API 对接 ERP、TMS、电商平台与自动化设备。"
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "技术架构",
+      "title": "为复杂仓库而生的工程决策",
+      "items": [
+        {
+          "tag": "api-first",
+          "title": "API 优先",
+          "desc": "所有界面能力皆有对应接口，你的集成永远不会遇到\"功能没有开放\"。"
+        },
+        {
+          "tag": "multi-site",
+          "title": "多仓协同",
+          "desc": "一仓一策的库区、策略与计费模型，跨仓调拨与库存共享开箱即用。"
+        },
+        {
+          "tag": "rfid-ready",
+          "title": "条码 / RFID",
+          "desc": "兼容主流 PDA、打印与 RFID 读写设备协议，旧设备平滑接入。"
+        }
+      ]
+    }
+  },
+  "lims": {
+    "hero": {
+      "badge": "LIMS · 环境检测实验室信息管理系统",
+      "titleLead": "让每份样本可追溯，",
+      "titleGradient": "每次检测可信赖",
+      "subtitle": "样品流转、仪器联接、质控与审计追踪——LIMS 让环境检测实验室的每个环节都留下完整、不可篡改的数字足迹。",
+      "terminalTitle": "limsctl — 实验室控制台",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "limsctl sample register --site river-03"
+        },
+        {
+          "kind": "ok",
+          "text": "水样 W-2026-0842 已登记 · 条码已绑定"
+        },
+        {
+          "kind": "cmd",
+          "text": "limsctl assay run --panel GB5749"
+        },
+        {
+          "kind": "info",
+          "text": "仪器 ICP-MS 已连接 → 数据回传中…"
+        },
+        {
+          "kind": "ok",
+          "text": "结果复核通过 · 报告 R-8841 已签发"
+        },
+        {
+          "kind": "cmd",
+          "text": "limsctl audit trail --sample W-2026-0842"
+        },
+        {
+          "kind": "ok",
+          "text": "12 条操作记录 · ALCOA+ 完整性校验通过"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "样品可追溯"
+        },
+        {
+          "value": 60,
+          "suffix": "%",
+          "label": "报告周期缩短"
+        },
+        {
+          "value": 200,
+          "suffix": "+",
+          "label": "仪器驱动协议"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "自动质控监控"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "功能矩阵",
+      "title": "覆盖检测业务全流程",
+      "subtitle": "从样本抵达实验室到报告交付，每一步都被系统编排与完整记录。",
+      "items": [
+        {
+          "icon": "TestTube",
+          "title": "样品流转",
+          "desc": "登记、分装、流转与销毁全生命周期管理，条码/二维码双向绑定。"
+        },
+        {
+          "icon": "Workflow",
+          "title": "检测编排",
+          "desc": "可视化流程设计器，按项目模板自动派发检测任务与提醒。"
+        },
+        {
+          "icon": "Microscope",
+          "title": "仪器联接",
+          "desc": "200+ 驱动协议直连分析仪，结果自动回传，杜绝手工誊抄。"
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "质量控制",
+          "desc": "Westgard 规则自动判定，失控即时预警与处理留痕。"
+        },
+        {
+          "icon": "FileCheck",
+          "title": "报告与审计",
+          "desc": "模板化报告一键签发，操作留痕不可篡改，随时追溯。"
+        },
+        {
+          "icon": "Scale",
+          "title": "合规支持",
+          "desc": "内置 GLP / GMP / ISO 17025 / 21 CFR Part 11 合规配置集。"
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "数据完整性",
+      "title": "审计级的数据完整性设计",
+      "items": [
+        {
+          "tag": "alcoa-plus",
+          "title": "ALCOA+ 原则",
+          "desc": "可归因、清晰、同步、原始、准确，外加完整、一致、持久、可用。"
+        },
+        {
+          "tag": "e-signature",
+          "title": "电子签名",
+          "desc": "双因子签署与签名绑定数据哈希，任何改动即刻失效。"
+        },
+        {
+          "tag": "audit-trail",
+          "title": "审计追踪",
+          "desc": "全操作时间链记录，支持按人员、样本、时间区间多维回放。"
+        }
+      ]
+    }
+  },
+  "icms": {
+    "hero": {
+      "badge": "ICMS · 智慧社区管理系统",
+      "titleLead": "让社区运转，",
+      "titleGradient": "井然有序",
+      "subtitle": "房产、门禁、停车、收费与工单——ICMS 把人、车、房与设施纳入一张数字网络，让每一项社区服务都清晰、可追溯。",
+      "terminalTitle": "icmsctl — 社区运营控制台",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "icmsctl resident check-in --unit B-1201"
+        },
+        {
+          "kind": "ok",
+          "text": "住户已登记 · 门禁权限已同步"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl visitor approve --car 沪A·8F22K"
+        },
+        {
+          "kind": "info",
+          "text": "访客已放行 · 车位 P-2 预留 2 小时"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl workorder create --type repair"
+        },
+        {
+          "kind": "ok",
+          "text": "工单 WO-3310 已派发 · 预计 40 分钟到场"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl billing generate --month 2026-08"
+        },
+        {
+          "kind": "ok",
+          "text": "账单已生成 · 收缴率 96.8%"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 99.9,
+          "suffix": "%",
+          "label": "设备在线率"
+        },
+        {
+          "value": 2,
+          "suffix": "×",
+          "label": "物业运营效率"
+        },
+        {
+          "value": 500,
+          "suffix": "+",
+          "label": "兼容门禁 / 道闸设备"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "无人值守巡检"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "功能矩阵",
+      "title": "覆盖社区运营全场景",
+      "subtitle": "从入住登记到物业缴费，社区的人、车、房与设施都在一条数字链路上。",
+      "items": [
+        {
+          "icon": "Home",
+          "title": "房产与住户",
+          "desc": "楼栋、单元与房产档案管理，入住 / 退房一键办理，住户关系清晰可查。"
+        },
+        {
+          "icon": "DoorOpen",
+          "title": "门禁通行",
+          "desc": "人脸、刷卡与蓝牙多方式开门，权限按住户、访客、员工分档下发。"
+        },
+        {
+          "icon": "Car",
+          "title": "停车管理",
+          "desc": "道闸联动、车位占用实时可见，月租、临停与访客车牌自动计费。"
+        },
+        {
+          "icon": "ReceiptText",
+          "title": "收费与账单",
+          "desc": "物业费与公摊费用自动生成账单，线上缴费与欠费催缴形成闭环。"
+        },
+        {
+          "icon": "Wrench",
+          "title": "工单报修",
+          "desc": "业主一键报修，工单自动派发与时效考核，处理进度全程可查。"
+        },
+        {
+          "icon": "Bell",
+          "title": "公告与设备",
+          "desc": "公告精准推送触达住户，设施巡检与维保计划到期自动提醒。"
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "架构设计",
+      "title": "为多小区运营而生的工程决策",
+      "items": [
+        {
+          "tag": "iot-ready",
+          "title": "IoT 设备接入",
+          "desc": "门禁、道闸、摄像头等设备协议统一接入，存量硬件平滑升级。"
+        },
+        {
+          "tag": "multi-community",
+          "title": "多小区集团化",
+          "desc": "集团—项目两级模型，一套系统同时运营多个小区，权限互不越界。"
+        },
+        {
+          "tag": "open-api",
+          "title": "开放 API",
+          "desc": "与智慧城市平台、支付与 OA 系统标准对接，数据随时取用。"
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "关于 LoopLoopTech",
+    "lead": "我们是一家专注于仓储、实验室与智慧社区数字化的公司。名字里的两个 Loop，是我们对软件的全部理解：系统应该像循环一样持续运转，产品应该像循环一样持续进化。",
+    "sections": [
+      {
+        "title": "我们相信",
+        "desc": "好的企业软件不该是昂贵的定制项目，而应是开箱即用、越用越聪明的公共服务。我们把复杂的工程留给平台，把简单的确定性交给客户。"
+      },
+      {
+        "title": "我们做事的方式",
+        "desc": "小团队、长周期、工程驱动。我们不做功能堆砌的路线图，只解决客户运营中真实存在的摩擦。每一个迭代都先经过自家仓库与实验室伙伴的验证。"
+      }
+    ],
+    "values": {
+      "eyebrow": "价值观",
+      "items": [
+        {
+          "title": "克制",
+          "desc": "功能做减法，可靠性做加法。",
+          "icon": "Feather"
+        },
+        {
+          "title": "专业",
+          "desc": "以专业标准打磨每一个细节。",
+          "icon": "BadgeCheck"
+        },
+        {
+          "title": "长期主义",
+          "desc": "与客户按十年尺度合作。",
+          "icon": "Sprout"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "联系我们",
+      "title": "聊聊你的业务",
+      "desc": "无论是一间实验室、一座仓库，还是分布全球的供应链网络，我们都乐意听听你的故事。",
+      "email": "hello@looplooptech.com"
+    }
+  },
+  "footer": {
+    "tagline": "循环不息，创建不止。",
+    "columns": {
+      "products": {
+        "title": "产品",
+        "wms": "WMS 仓储管理",
+        "lims": "LIMS 实验室管理",
+        "icms": "ICMS 智慧社区管理"
+      },
+      "company": {
+        "title": "公司",
+        "about": "关于我们",
+        "careers": "加入我们",
+        "contact": "联系方式"
+      },
+      "resources": {
+        "title": "资源",
+        "docs": "文档中心",
+        "api": "API 参考",
+        "status": "服务状态"
+      },
+      "legal": {
+        "title": "法律",
+        "privacy": "隐私政策",
+        "terms": "服务条款"
+      }
+    },
+    "copyright": "© {year} LoopLoopTech. 保留所有权利。"
+  }
+}

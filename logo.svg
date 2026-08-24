@@ -1,0 +1,38 @@
+<svg width="1024" height="1024" viewBox="87.5 -32.5 665 665"
+     xmlns="http://www.w3.org/2000/svg">
+
+  <title>Looplooptech Logo</title>
+
+  <!-- navy color -->
+  <g fill="none" stroke="#1e80ff" stroke-linejoin="miter">
+
+    <!-- Outer hexagon / cube structure -->
+    <path
+      d="
+      M180 180
+      L420 50
+      L660 180
+      L660 420
+      L420 550
+      L180 420
+      Z"
+      stroke-width="28"/>
+
+    <!-- Inner diagonal perspective line -->
+    <path
+      d="
+      M180 420
+      L660 180"
+      stroke-width="7"/>
+
+    <!-- Right vertical open segment -->
+    <path
+      d="
+      M660 180
+      L660 420"
+      stroke-width="28"/>
+
+  </g>
+
+
+</svg>

@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "home": {
+      "title": "LoopLoopTech — Run your warehouse, lab and community in a smart loop",
+      "description": "LoopLoopTech delivers three independent products — WMS warehouse management, LIMS lab information management and ICMS smart community management — making operations observable, compliant and continuously optimized."
+    },
+    "wms": {
+      "title": "WMS Warehouse Management — LoopLoopTech",
+      "description": "Cloud-native WMS: smart putaway, wave picking, real-time inventory, multi-site orchestration and open APIs. Every item on its optimal path."
+    },
+    "lims": {
+      "title": "LIMS Lab Information Management — LoopLoopTech",
+      "description": "LIMS for environmental testing labs: full sample lifecycle, instrument integration, QC and audit trails. GLP/GMP/ISO 17025 compliant by design."
+    },
+    "icms": {
+      "title": "ICMS Smart Community Management — LoopLoopTech",
+      "description": "Smart community management: property & residents, gate access, parking, billing and work orders — one system for calm, orderly community operations."
+    },
+    "about": {
+      "title": "About us — LoopLoopTech",
+      "description": "LoopLoopTech is ai native company focused on warehouse, lab and smart community digitization. We believe great software should run and evolve like a loop."
+    }
+  },
+  "nav": {
+    "products": "Products",
+    "wms": "WMS",
+    "wmsTag": "Warehouse Management System",
+    "lims": "LIMS",
+    "limsTag": "LIMS for Environmental Testing",
+    "icms": "ICMS",
+    "icmsTag": "Smart Community Management",
+    "solutions": "Solutions",
+    "about": "About",
+    "cta": "Book a demo",
+    "language": "Language",
+    "theme": "Toggle theme",
+    "menu": "Menu"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "bookDemo": "Book a demo",
+    "contact": "Contact us",
+    "freeTrial": "Start free",
+    "copy": "Copy",
+    "copied": "Copied",
+    "features": "Features",
+    "metrics": "Metrics",
+    "architecture": "Architecture"
+  },
+  "home": {
+    "hero": {
+      "badge": "Enterprise SaaS: warehouse · lab · community",
+      "titleLead": "Run your business in a",
+      "titleGradient": "smart loop",
+      "subtitle": "LoopLoopTech delivers WMS, LIMS and ICMS as three independent products — every item, every sample and every community service enters an observable, optimizable digital loop that starts paying off from day one.",
+      "terminalTitle": "loopctl — operations console",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "loopctl login --tenant acme"
+        },
+        {
+          "kind": "ok",
+          "text": "Authenticated · tenant \"acme\""
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl warehouse status"
+        },
+        {
+          "kind": "info",
+          "text": "WH-01 Shanghai   128,404 SKUs   accuracy 99.98%"
+        },
+        {
+          "kind": "info",
+          "text": "WH-02 South China  86,210 SKUs   accuracy 99.95%"
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl sample trace LIMS-2026-0842"
+        },
+        {
+          "kind": "ok",
+          "text": "Received → Testing (LC-MS) → Report released"
+        },
+        {
+          "kind": "cmd",
+          "text": "loopctl community status"
+        },
+        {
+          "kind": "info",
+          "text": "Donghu Gardens  gates online 42/42  work orders 1,280  satisfaction 98.6%"
+        }
+      ]
+    },
+    "stats": {
+      "items": [
+        {
+          "value": 99.99,
+          "suffix": "%",
+          "label": "Uptime SLA"
+        },
+        {
+          "value": 500,
+          "suffix": "+",
+          "label": "Enterprise customers"
+        },
+        {
+          "value": 20,
+          "suffix": "M+",
+          "label": "Daily transactions"
+        },
+        {
+          "value": 30,
+          "suffix": "+",
+          "label": "Integrations"
+        }
+      ]
+    },
+    "products": {
+      "eyebrow": "Core products",
+      "title": "Three independent products, three core scenarios",
+      "subtitle": "WMS runs warehouses, LIMS runs labs, ICMS runs communities — each shipped and evolved on its own. Pick what you need.",
+      "wms": {
+        "tag": "Warehouse Management System",
+        "desc": "From receiving to wave-based shipping, WMS keeps your warehouse on its optimal path with real-time inventory and smart algorithms.",
+        "features": [
+          "Smart receiving & putaway",
+          "Wave picking & fulfillment",
+          "Real-time inventory & cycle counts",
+          "Multi-site, multi-owner orchestration"
+        ]
+      },
+      "lims": {
+        "tag": "Lab Information Management · Environmental Testing",
+        "desc": "Built for environmental testing labs, from sample registration to report release — LIMS leaves a complete audit trail behind every test.",
+        "features": [
+          "Full sample lifecycle tracking",
+          "Automatic instrument data capture",
+          "QC & anomaly alerting",
+          "One-click test reports"
+        ]
+      },
+      "icms": {
+        "tag": "Smart Community Management",
+        "desc": "From gate access to maintenance tickets, ICMS brings people, vehicles, homes and facilities into one digital network for orderly community operations.",
+        "features": [
+          "Property & resident records",
+          "Access, visitor & parking control",
+          "Billing & work orders",
+          "Facilities & announcements"
+        ]
+      }
+    },
+    "capabilities": {
+      "eyebrow": "Engineering",
+      "title": "An engineering commitment you can trust",
+      "subtitle": "SaaS is not just hosting — it is an engineering commitment.",
+      "items": [
+        {
+          "icon": "Layers",
+          "title": "Multi-tenant cloud native",
+          "desc": "Containerized deployment with tenant-level isolation. Silent upgrades, zero disruption."
+        },
+        {
+          "icon": "Braces",
+          "title": "Open API first",
+          "desc": "1,200+ REST/GraphQL endpoints and webhooks connect ERP, TMS and instruments seamlessly."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Enterprise security",
+          "desc": "Encryption in transit and at rest, fine-grained permissions, full audit logs. SOC 2 aligned."
+        },
+        {
+          "icon": "Scaling",
+          "title": "Elastic scaling",
+          "desc": "Auto-scale for peak seasons, auto-release when idle. Pay only for what you use."
+        },
+        {
+          "icon": "ChartLine",
+          "title": "Intelligent analytics",
+          "desc": "Built-in BI dashboards and anomaly detection turn operations data into decisions."
+        },
+        {
+          "icon": "Globe2",
+          "title": "Global regions",
+          "desc": "Multi-AZ at home and edge nodes abroad. Cross-border compliance, configurable."
+        }
+      ]
+    },
+    "how": {
+      "eyebrow": "How it works",
+      "title": "Three steps into the loop",
+      "chapters": [
+        {
+          "no": "01",
+          "title": "Onboard",
+          "desc": "Standard data models and migration tooling bring your items, inventory, sample archives and resident records online within a week — without pausing operations."
+        },
+        {
+          "no": "02",
+          "title": "Operate",
+          "desc": "PDAs, screens and dashboards work in sync. Warehouse moves, lab workflows and community operations stream back in real time with automatic anomaly alerts."
+        },
+        {
+          "no": "03",
+          "title": "Grow",
+          "desc": "Operations data feeds the algorithms: slotting, pick paths and assay schedules keep optimizing. The longer you run, the smarter it gets."
+        }
+      ]
+    },
+    "testimonials": {
+      "eyebrow": "Testimonials",
+      "title": "Already in the loop",
+      "items": [
+        {
+          "quote": "With WMS we scaled from 80k to 250k orders a day during peak season, with inventory accuracy stable above 99.9%.",
+          "name": "Chen Zhiyuan",
+          "role": "Operations Director",
+          "company": "Leading cross-border e-commerce"
+        },
+        {
+          "quote": "Audit trails and e-signatures worked out of the box. CNAS renewal prep took half the time, and no more weekend paperwork.",
+          "name": "Liu Chang",
+          "role": "Quality Lead",
+          "company": "Third-party testing group"
+        },
+        {
+          "quote": "Since switching to ICMS, gate, parking and billing are fully connected. Our property team cut manpower by 30% and resident satisfaction went from 82% to 96%.",
+          "name": "Wang Huimin",
+          "role": "Property Director",
+          "company": "Large residential community"
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to enter the smart loop?",
+      "subtitle": "Start a 14-day free trial, or book a 30-minute demo to see how LoopLoopTech fits your business.",
+      "primary": "Book a demo",
+      "secondary": "Start free"
+    }
+  },
+  "wms": {
+    "hero": {
+      "badge": "WMS · Warehouse Management",
+      "titleLead": "Every item, on its ",
+      "titleGradient": "optimal path",
+      "subtitle": "Smart putaway, wave picking, real-time inventory and multi-site orchestration — WMS turns every warehouse move into measurable, optimizable data.",
+      "terminalTitle": "wmsctl — warehouse console",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "wmsctl inbound create --asn ASN-88231"
+        },
+        {
+          "kind": "ok",
+          "text": "ASN created · 3 SKUs · 1,200 units"
+        },
+        {
+          "kind": "cmd",
+          "text": "wmsctl putaway suggest --zone A"
+        },
+        {
+          "kind": "info",
+          "text": "Suggested: A-03-02-01 · 42m away · fast-mover zone"
+        },
+        {
+          "kind": "ok",
+          "text": "Putaway complete · location A-03-02-01 locked"
+        },
+        {
+          "kind": "cmd",
+          "text": "wmsctl wave release"
+        },
+        {
+          "kind": "ok",
+          "text": "Wave W-1401 released · pick path -27%"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 99.9,
+          "suffix": "%",
+          "label": "Inventory accuracy"
+        },
+        {
+          "value": 3,
+          "suffix": "×",
+          "label": "Fulfillment speed"
+        },
+        {
+          "value": 40,
+          "suffix": "%",
+          "label": "Operating cost down"
+        },
+        {
+          "value": 1000,
+          "suffix": "+",
+          "label": "Barcode/RFID devices"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "Feature matrix",
+      "title": "The full warehouse pipeline",
+      "subtitle": "From first putaway to last parcel shipped — a module and strategy engine for every step.",
+      "items": [
+        {
+          "icon": "PackagePlus",
+          "title": "Inbound",
+          "desc": "ASN scheduling, QC holds and smart putaway suggestions — decide at the dock door."
+        },
+        {
+          "icon": "Truck",
+          "title": "Fulfillment",
+          "desc": "Wave strategies, path optimization, pack & carrier handoff. Paperless end to end."
+        },
+        {
+          "icon": "Boxes",
+          "title": "Inventory",
+          "desc": "Batch, serial and expiry dimensions with dynamic safety stock and slow-mover alerts."
+        },
+        {
+          "icon": "ClipboardCheck",
+          "title": "Counts & waves",
+          "desc": "Cycle counting without locking bins. Waves auto-orchestrated by SLA and carrier."
+        },
+        {
+          "icon": "ChartBar",
+          "title": "Analytics",
+          "desc": "Labor, capacity and SLA dashboards with automatic root-cause drill-down."
+        },
+        {
+          "icon": "Plug",
+          "title": "Integrations",
+          "desc": "Standard APIs for ERP, TMS, marketplaces and automation equipment."
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "Architecture",
+      "title": "Engineering decisions for complex warehouses",
+      "items": [
+        {
+          "tag": "api-first",
+          "title": "API first",
+          "desc": "Every UI capability has a corresponding endpoint. Your integration never hits a dead end."
+        },
+        {
+          "tag": "multi-site",
+          "title": "Multi-site",
+          "desc": "Per-site zones, strategies and billing models. Cross-site transfers and shared stock out of the box."
+        },
+        {
+          "tag": "rfid-ready",
+          "title": "Barcode / RFID",
+          "desc": "Compatible with mainstream PDA, printing and RFID protocols. Legacy devices onboard smoothly."
+        }
+      ]
+    }
+  },
+  "lims": {
+    "hero": {
+      "badge": "LIMS · Lab Information Management",
+      "titleLead": "Every sample traceable, ",
+      "titleGradient": "every result trusted",
+      "subtitle": "Sample flow, instrument connectivity, QC and audit trails — LIMS leaves a complete, tamper-evident digital footprint across your environmental testing lab.",
+      "terminalTitle": "limsctl — lab console",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "limsctl sample register --site river-03"
+        },
+        {
+          "kind": "ok",
+          "text": "Water sample W-2026-0842 registered · barcode bound"
+        },
+        {
+          "kind": "cmd",
+          "text": "limsctl assay run --panel GB5749"
+        },
+        {
+          "kind": "info",
+          "text": "Instrument ICP-MS connected → streaming results…"
+        },
+        {
+          "kind": "ok",
+          "text": "Review passed · report R-8841 released"
+        },
+        {
+          "kind": "cmd",
+          "text": "limsctl audit trail --sample W-2026-0842"
+        },
+        {
+          "kind": "ok",
+          "text": "12 records · ALCOA+ integrity check passed"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 100,
+          "suffix": "%",
+          "label": "Sample traceability"
+        },
+        {
+          "value": 60,
+          "suffix": "%",
+          "label": "Faster reporting"
+        },
+        {
+          "value": 200,
+          "suffix": "+",
+          "label": "Instrument drivers"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "Auto QC monitoring"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "Feature matrix",
+      "title": "The full testing workflow",
+      "subtitle": "From sample intake to report delivery — every step orchestrated and recorded.",
+      "items": [
+        {
+          "icon": "TestTube",
+          "title": "Sample flow",
+          "desc": "Register, aliquot, track and dispose across the full lifecycle with barcode binding."
+        },
+        {
+          "icon": "Workflow",
+          "title": "Assay orchestration",
+          "desc": "Visual workflow designer auto-dispatches test tasks and reminders from templates."
+        },
+        {
+          "icon": "Microscope",
+          "title": "Instruments",
+          "desc": "200+ analyzer drivers stream results back automatically. No manual transcription."
+        },
+        {
+          "icon": "ShieldCheck",
+          "title": "Quality control",
+          "desc": "Westgard rules with automatic verdicts, instant out-of-control alerts and documented handling."
+        },
+        {
+          "icon": "FileCheck",
+          "title": "Reports & audit",
+          "desc": "Templated one-click release with immutable operation logs, traceable at any time."
+        },
+        {
+          "icon": "Scale",
+          "title": "Compliance",
+          "desc": "Built-in configuration sets for GLP / GMP / ISO 17025 / 21 CFR Part 11."
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "Data integrity",
+      "title": "Audit-grade data integrity by design",
+      "items": [
+        {
+          "tag": "alcoa-plus",
+          "title": "ALCOA+",
+          "desc": "Attributable, legible, contemporaneous, original and accurate — plus complete, consistent, enduring and available."
+        },
+        {
+          "tag": "e-signature",
+          "title": "E-signatures",
+          "desc": "Two-factor signing bound to the data hash. Any modification invalidates instantly."
+        },
+        {
+          "tag": "audit-trail",
+          "title": "Audit trail",
+          "desc": "A full operation timeline, replayable by user, sample or time window."
+        }
+      ]
+    }
+  },
+  "icms": {
+    "hero": {
+      "badge": "ICMS · Smart Community Management",
+      "titleLead": "Community operations, ",
+      "titleGradient": "in perfect order",
+      "subtitle": "Properties, gate access, parking, billing and work orders — ICMS brings people, vehicles, homes and facilities into one digital network where every service is clear and traceable.",
+      "terminalTitle": "icmsctl — community console",
+      "lines": [
+        {
+          "kind": "cmd",
+          "text": "icmsctl resident check-in --unit B-1201"
+        },
+        {
+          "kind": "ok",
+          "text": "Resident registered · gate access synced"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl visitor approve --car LIC-8F22K"
+        },
+        {
+          "kind": "info",
+          "text": "Visitor approved · spot P-2 held for 2h"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl workorder create --type repair"
+        },
+        {
+          "kind": "ok",
+          "text": "Work order WO-3310 dispatched · ETA 40 min"
+        },
+        {
+          "kind": "cmd",
+          "text": "icmsctl billing generate --month 2026-08"
+        },
+        {
+          "kind": "ok",
+          "text": "Billing generated · collection rate 96.8%"
+        }
+      ]
+    },
+    "metrics": {
+      "items": [
+        {
+          "value": 99.9,
+          "suffix": "%",
+          "label": "Device uptime"
+        },
+        {
+          "value": 2,
+          "suffix": "×",
+          "label": "Property efficiency"
+        },
+        {
+          "value": 500,
+          "suffix": "+",
+          "label": "Gate & barrier devices"
+        },
+        {
+          "value": 24,
+          "suffix": "/7",
+          "label": "Unattended inspection"
+        }
+      ]
+    },
+    "features": {
+      "eyebrow": "Feature matrix",
+      "title": "Every community scenario, covered",
+      "subtitle": "From move-in to billing, people, vehicles, homes and facilities all sit on one digital track.",
+      "items": [
+        {
+          "icon": "Home",
+          "title": "Property & residents",
+          "desc": "Building, unit and property records with one-click move-in / move-out and clear resident relationships."
+        },
+        {
+          "icon": "DoorOpen",
+          "title": "Gate access",
+          "desc": "Face, card and Bluetooth entry with role-based permissions for residents, visitors and staff."
+        },
+        {
+          "icon": "Car",
+          "title": "Parking",
+          "desc": "Barrier integration with live occupancy; monthly, hourly and visitor plates billed automatically."
+        },
+        {
+          "icon": "ReceiptText",
+          "title": "Billing",
+          "desc": "Property fees and shared costs auto-generated, with online payment and arrears follow-up."
+        },
+        {
+          "icon": "Wrench",
+          "title": "Work orders",
+          "desc": "One-tap repair requests with auto-dispatch, SLA tracking and visible progress."
+        },
+        {
+          "icon": "Bell",
+          "title": "Announcements & assets",
+          "desc": "Targeted announcements plus scheduled inspection and maintenance reminders."
+        }
+      ]
+    },
+    "architecture": {
+      "eyebrow": "Architecture",
+      "title": "Engineering decisions for multi-community groups",
+      "items": [
+        {
+          "tag": "iot-ready",
+          "title": "IoT device access",
+          "desc": "Unified protocol onboarding for gates, barriers and cameras — legacy hardware upgrades smoothly."
+        },
+        {
+          "tag": "multi-community",
+          "title": "Multi-community groups",
+          "desc": "Group-to-project hierarchy runs many communities on one system with strict permission isolation."
+        },
+        {
+          "tag": "open-api",
+          "title": "Open API",
+          "desc": "Standard integrations with smart city platforms, payment and OA systems — data always accessible."
+        }
+      ]
+    }
+  },
+  "about": {
+    "title": "About LoopLoopTech",
+    "lead": "We are a company focused on warehouse, lab and smart community digitization. The two loops in our name capture everything we believe about software: systems should run in loops, and products should evolve in loops.",
+    "sections": [
+      {
+        "title": "What we believe",
+        "desc": "Great enterprise software should not be an expensive custom project. It should be a public service that works out of the box and gets smarter with use. We keep the hard engineering on the platform, and hand simple certainty to our customers."
+      },
+      {
+        "title": "How we work",
+        "desc": "A small team, long cycles, engineering-driven. We do not stack features on a roadmap — we remove real friction from real operations. Every iteration is validated in warehouses and labs run by our partners first."
+      }
+    ],
+    "values": {
+      "eyebrow": "Values",
+      "items": [
+        {
+          "title": "Restraint",
+          "desc": "Subtract features, add reliability.",
+          "icon": "Feather"
+        },
+        {
+          "title": "Professional",
+          "desc": "Polish every detail to professional standards.",
+          "icon": "BadgeCheck"
+        },
+        {
+          "title": "Long-term",
+          "desc": "Partner with customers in decades.",
+          "icon": "Sprout"
+        }
+      ]
+    },
+    "contact": {
+      "eyebrow": "Contact",
+      "title": "Tell us about your business",
+      "desc": "Whether it is one lab, one warehouse, or a supply chain network across continents — we would love to hear your story.",
+      "email": "hello@looplooptech.com"
+    }
+  },
+  "footer": {
+    "tagline": "Endless Loops, Ceaseless Creation.",
+    "columns": {
+      "products": {
+        "title": "Products",
+        "wms": "WMS Warehouse",
+        "lims": "LIMS Lab",
+        "icms": "ICMS Smart Community"
+      },
+      "company": {
+        "title": "Company",
+        "about": "About us",
+        "careers": "Careers",
+        "contact": "Contact"
+      },
+      "resources": {
+        "title": "Resources",
+        "docs": "Documentation",
+        "api": "API reference",
+        "status": "Status"
+      },
+      "legal": {
+        "title": "Legal",
+        "privacy": "Privacy policy",
+        "terms": "Terms of service"
+      }
+    },
+    "copyright": "© {year} LoopLoopTech. All rights reserved."
+  }
+}

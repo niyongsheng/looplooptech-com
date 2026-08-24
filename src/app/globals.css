@@ -1,0 +1,374 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* ---------- Design tokens (see DESIGN.md §3) ---------- */
+:root {
+  --bg: #ffffff;
+  --bg-subtle: #f6f8fb;
+  --bg-inset: #eef2f7;
+  --fg: #0e1526;
+  --fg-muted: #5a6577;
+  --fg-faint: #98a2b3;
+  --border: #e4e9f1;
+  --brand: #1e80ff;
+  --brand-hover: #3d8eff;
+  --brand-strong: #0b5fd9;
+  --brand-soft: rgba(30, 128, 255, 0.1);
+  --accent-wms: #00b383;
+  --accent-lims: #8b5cf6;
+  --accent-icms: #f59e0b;
+  --success: #12a150;
+  --warning: #e8930c;
+  --danger: #e5484d;
+  --glow-opacity: 0.12;
+  --grid-line: rgba(30, 128, 255, 0.06);
+  --shadow-card: 0 12px 32px rgba(30, 128, 255, 0.1);
+}
+
+.dark {
+  --bg: #0a0e1a;
+  --bg-subtle: #101624;
+  --bg-inset: #151c2e;
+  --fg: #e8edf7;
+  --fg-muted: #93a0b8;
+  --fg-faint: #5d6a85;
+  --border: #1e2740;
+  --brand: #1e80ff;
+  --brand-hover: #3d8eff;
+  --brand-strong: #0b5fd9;
+  --brand-soft: rgba(30, 128, 255, 0.14);
+  --glow-opacity: 0.18;
+  --grid-line: rgba(30, 128, 255, 0.08);
+  --shadow-card: 0 12px 32px rgba(0, 0, 0, 0.35);
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-subtle: var(--bg-subtle);
+  --color-bg-inset: var(--bg-inset);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-fg-faint: var(--fg-faint);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-wms: var(--accent-wms);
+  --color-lims: var(--accent-lims);
+  --color-icms: var(--accent-icms);
+  --color-wms-soft: rgba(0, 179, 131, 0.12);
+  --color-lims-soft: rgba(139, 92, 246, 0.12);
+  --color-icms-soft: rgba(245, 158, 11, 0.14);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+
+  --font-sans: "Inter Variable", "PingFang SC", "Hiragino Sans GB",
+    "Microsoft YaHei", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono Variable", "SF Mono", Consolas, monospace;
+
+  --ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- Base ---------- */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+::selection {
+  background: rgba(30, 128, 255, 0.25);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ---------- Gradient text (DESIGN.md §4.3) ---------- */
+.text-gradient {
+  background: linear-gradient(135deg, #1e80ff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-wms {
+  background: linear-gradient(135deg, #1e80ff 0%, #00b383 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-lims {
+  background: linear-gradient(135deg, #1e80ff 0%, #8b5cf6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.text-gradient-icms {
+  background: linear-gradient(135deg, #1e80ff 0%, #f59e0b 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ---------- Engineering grid background (§3.3) ---------- */
+.bg-grid {
+  background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 44px 44px;
+  animation: grid-drift 60s linear infinite;
+}
+
+@keyframes grid-drift {
+  from {
+    background-position: 0 0;
+  }
+
+  to {
+    background-position: 44px 44px;
+  }
+}
+
+/* ---------- Glow orbs (§3.3) ---------- */
+.glow-orb {
+  position: absolute;
+  border-radius: 9999px;
+  filter: blur(120px);
+  background: radial-gradient(circle, var(--brand) 0%, transparent 70%);
+  opacity: var(--glow-opacity);
+  animation: orb-breathe 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.glow-orb--lims {
+  background: radial-gradient(circle, var(--accent-lims) 0%, transparent 70%);
+}
+
+.glow-orb--wms {
+  background: radial-gradient(circle, var(--accent-wms) 0%, transparent 70%);
+}
+
+.glow-orb--icms {
+  background: radial-gradient(circle, var(--accent-icms) 0%, transparent 70%);
+}
+
+@keyframes orb-breathe {
+
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: var(--glow-opacity);
+  }
+
+  50% {
+    transform: scale(1.15);
+    opacity: calc(var(--glow-opacity) * 1.4);
+  }
+}
+
+/* ---------- Scroll reveal (§7.2) ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.5s var(--ease-out-expo),
+    transform 0.5s var(--ease-out-expo), filter 0.5s var(--ease-out-expo);
+  transition-delay: var(--reveal-delay, 0ms);
+  filter: blur(6px);
+}
+
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  filter: blur(0);
+}
+
+/* ---------- Logo stroke flow (§7.2) ---------- */
+/* 静止态：dash 覆盖全路径 => 实线（用双值列表 100 0，与 hover 的 24 76 同长度，可平滑插值） */
+.logo-loop path {
+  stroke-dasharray: 100 0;
+  stroke-dashoffset: 0;
+  /* 进出环流时 dash 开合与回退均平滑过渡，避免突跳 */
+  transition: stroke-dasharray 300ms ease, stroke-dashoffset 300ms ease;
+}
+
+/* 光段柔光层：默认隐藏（无动画偏好时保持纯实线 logo，不显示柔光） */
+.logo-loop-glow {
+  filter: blur(3px);
+  opacity: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  /* hover 时 logo 整体化作流动的光段（环流效果）：
+     先 300ms 平滑展开光缝，再以恒定速度线性循环流动（无缝，无接缝跳变） */
+  .logo-loop:hover .logo-loop-stroke {
+    stroke-dasharray: 24 76;
+    animation: logo-flow 1.6s linear 300ms infinite;
+  }
+
+  .logo-loop-glow {
+    transition: opacity 250ms ease;
+  }
+
+  .logo-loop:hover .logo-loop-glow {
+    opacity: 0.5;
+  }
+}
+
+@keyframes logo-flow {
+  from {
+    stroke-dashoffset: 0;
+  }
+
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* ---------- Terminal cursor blink (§6.4) ---------- */
+.term-cursor {
+  display: inline-block;
+  width: 8px;
+  height: 1.1em;
+  background: var(--brand);
+  vertical-align: text-bottom;
+  margin-left: 2px;
+  animation: cursor-blink 1s steps(1) infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+/* ---------- Spotlight card (§7.2) ---------- */
+.spotlight-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.spotlight-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  background: radial-gradient(320px circle at var(--x, 50%) var(--y, 50%),
+      var(--brand-soft),
+      transparent 65%);
+  pointer-events: none;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+/* ---------- Scroll progress bar (§7.2) ---------- */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  transform-origin: 0 50%;
+  transform: scaleX(var(--progress, 0));
+  background: linear-gradient(90deg, #1e80ff 0%, #8b5cf6 100%);
+  z-index: 60;
+  transition: transform 0.1s linear;
+}
+
+/* ---------- Marquee (testimonials logos) ---------- */
+.marquee-track {
+  display: flex;
+  gap: 3rem;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* ---------- Hero float for mock panels ---------- */
+.float-soft {
+  animation: float-soft 7s ease-in-out infinite;
+}
+
+@keyframes float-soft {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* ---------- Component classes (see DESIGN.md §6) ---------- */
+@layer components {
+  .container-x {
+    @apply mx-auto w-full max-w-6xl px-4 md:px-6;
+  }
+
+  .section {
+    @apply py-16 md:py-24;
+  }
+
+  .btn-primary {
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-brand px-5 text-sm font-medium text-white transition-all duration-200 hover:-translate-y-px hover:bg-brand-hover hover:shadow-lg hover:shadow-brand/25 active:translate-y-0;
+  }
+
+  .btn-secondary {
+    @apply inline-flex h-10 items-center justify-center gap-2 rounded-lg border border-border px-5 text-sm font-medium text-fg transition-all duration-200 hover:-translate-y-px hover:border-brand/40 hover:bg-bg-subtle active:translate-y-0;
+  }
+
+  .eyebrow {
+    @apply inline-flex items-center gap-2 rounded-full border border-brand/25 bg-brand-soft px-3.5 py-1.5 font-mono text-[13px] tracking-wide text-brand;
+  }
+
+  .card {
+    @apply rounded-2xl border border-border bg-bg-subtle p-6 transition-all duration-300 hover:-translate-y-1 hover:border-brand/40 hover:shadow-[var(--shadow-card)];
+  }
+
+  .icon-box {
+    @apply flex h-10 w-10 items-center justify-center rounded-[10px];
+  }
+
+  .term-panel {
+    @apply overflow-hidden rounded-2xl border border-border bg-bg-inset shadow-[var(--shadow-card)];
+  }
+}

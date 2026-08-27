@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
@@ -20,6 +21,14 @@ export default function RootLayout({
     <html lang="zh-CN" suppressHydrationWarning>
       <body className="min-h-screen antialiased">
         <ThemeProvider>{children}</ThemeProvider>
+        {/* Cookiebot 同意管理：auto 模式需在首屏第三方脚本之前于 <head> 加载 */}
+        <Script
+          id="Cookiebot"
+          src="https://consent.cookiebot.com/uc.js"
+          data-cbid="3d19d30c-c3ab-4ea4-a453-0996e2044dea"
+          data-blockingmode="auto"
+          strategy="beforeInteractive"
+        />
       </body>
     </html>
   );

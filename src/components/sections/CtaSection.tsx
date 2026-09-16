@@ -1,5 +1,7 @@
 import { useTranslations } from "next-intl";
+import CursorGrid from "@/components/CursorGrid";
 import Reveal from "@/components/Reveal";
+import StarBorder from "@/components/StarBorder";
 import { DEMO_MAILTO } from "./SectionHeading";
 
 /**
@@ -10,7 +12,10 @@ export default function CtaSection() {
 
   return (
     <section className="section relative overflow-hidden">
-      <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_55%_65%_at_50%_50%,black_30%,transparent_100%)]" />
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_55%_65%_at_50%_50%,black_30%,transparent_100%)]">
+        <div className="bg-grid absolute inset-0" />
+        <CursorGrid />
+      </div>
       <div className="glow-orb -top-24 left-1/2 h-80 w-[480px] max-w-full -translate-x-1/2" />
       <div className="container-x relative text-center">
         <Reveal>
@@ -25,9 +30,11 @@ export default function CtaSection() {
         </Reveal>
         <Reveal delay={200}>
           <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-            <a href={DEMO_MAILTO} className="btn-primary">
-              {t("primary")}
-            </a>
+            <StarBorder>
+              <a href={DEMO_MAILTO} className="btn-primary">
+                {t("primary")}
+              </a>
+            </StarBorder>
             <a href={DEMO_MAILTO} className="btn-secondary">
               {t("secondary")}
             </a>

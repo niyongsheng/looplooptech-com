@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import CursorGrid from "@/components/CursorGrid";
 import Reveal from "@/components/Reveal";
 import StatsBar from "@/components/sections/StatsBar";
 import Terminal, { type TermLine } from "@/components/Terminal";
@@ -43,7 +44,10 @@ export default function ProductHero({
 
   return (
     <section className="relative overflow-hidden pb-16 pt-32 md:pb-24 md:pt-44">
-      <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black_35%,transparent_100%)]" />
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_70%_60%_at_50%_0%,black_35%,transparent_100%)]">
+        <div className="bg-grid absolute inset-0" />
+        <CursorGrid />
+      </div>
       <div className={`glow-orb ${accent.glow} -top-20 right-[8%] h-72 w-72`} />
       <div className="glow-orb -left-20 top-[300px] h-56 w-56 opacity-60" />
 

@@ -8,13 +8,21 @@ import type { CSSProperties, ReactNode } from "react";
 export default function SpotlightCard({
   children,
   className = "",
+  spotlightColor,
 }: {
   children: ReactNode;
   className?: string;
+  /** 聚光颜色（CSS 颜色值），缺省用品牌蓝 --brand-soft */
+  spotlightColor?: string;
 }) {
   return (
     <div
       className={`spotlight-card ${className}`}
+      style={
+        spotlightColor
+          ? ({ "--spotlight-color": spotlightColor } as CSSProperties)
+          : undefined
+      }
       onMouseMove={(e) => {
         const el = e.currentTarget;
         const rect = el.getBoundingClientRect();

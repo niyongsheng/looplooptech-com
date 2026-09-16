@@ -17,18 +17,21 @@ const accents = {
     tag: "text-wms",
     check: "text-wms",
     glow: "glow-orb--wms",
+    spotlight: "var(--color-wms-soft)",
   },
   lims: {
     iconBox: "bg-lims-soft text-lims",
     tag: "text-lims",
     check: "text-lims",
     glow: "glow-orb--lims",
+    spotlight: "var(--color-lims-soft)",
   },
   icms: {
     iconBox: "bg-icms-soft text-icms",
     tag: "text-icms",
     check: "text-icms",
     glow: "glow-orb--icms",
+    spotlight: "var(--color-icms-soft)",
   },
 } as const;
 
@@ -47,7 +50,10 @@ function ProductCard({ product }: { product: "wms" | "lims" | "icms" }) {
   const name = product.toUpperCase();
 
   return (
-    <SpotlightCard className="card group relative h-full p-8">
+    <SpotlightCard
+      className="card group relative h-full p-8"
+      spotlightColor={accent.spotlight}
+    >
       <div
         className={`glow-orb ${accent.glow} -top-8 right-[-16px] h-40 w-40`}
       />

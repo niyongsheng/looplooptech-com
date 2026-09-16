@@ -133,6 +133,35 @@ body {
   color: transparent;
 }
 
+/* ---------- Shiny gradient text（React Bits Shiny Text 式扫光，§7.2 高亮扫过） ---------- */
+/* 双层背景：底层品牌渐变 + 上层白色光带；光带左→右扫过后停留在画外，
+   reduced-motion 下动画被全局规则终止于 100% 关键帧（光带在画外），退化为纯渐变文字 */
+.text-shine {
+  background-image:
+    linear-gradient(115deg, transparent 42%, rgba(255, 255, 255, 0.8) 50%, transparent 58%),
+    linear-gradient(135deg, #1e80ff 0%, #8b5cf6 100%);
+  background-size: 300% 100%, 100% 100%;
+  background-position: 110% 0, 0 0;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sheen-sweep 4.8s ease-in-out 1.2s infinite;
+}
+
+@keyframes sheen-sweep {
+  0% {
+    background-position: 110% 0, 0 0;
+  }
+
+  40% {
+    background-position: -10% 0, 0 0;
+  }
+
+  100% {
+    background-position: -10% 0, 0 0;
+  }
+}
+
 /* ---------- Engineering grid background (§3.3) ---------- */
 .bg-grid {
   background-image: linear-gradient(var(--grid-line) 1px, transparent 1px),
@@ -276,13 +305,88 @@ body {
   opacity: 0;
   transition: opacity 0.3s ease;
   background: radial-gradient(320px circle at var(--x, 50%) var(--y, 50%),
-      var(--brand-soft),
+      var(--spotlight-color, var(--brand-soft)),
       transparent 65%);
   pointer-events: none;
 }
 
 .spotlight-card:hover::before {
   opacity: 1;
+}
+
+/* ---------- Star Border 流光边框（§7.2，React Bits Star Border 式） ---------- */
+.star-border {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 1.5px;
+  border-radius: 10px;
+}
+
+.star-border::before,
+.star-border::after {
+  content: "";
+  position: absolute;
+  width: 300%;
+  height: 50%;
+  border-radius: 50%;
+  opacity: 0.7;
+  background: radial-gradient(circle, var(--star-color, rgba(255, 255, 255, 0.85)) 0%, transparent 12%);
+  pointer-events: none;
+}
+
+.star-border::before {
+  bottom: -12px;
+  right: -250%;
+  animation: star-move-bottom var(--star-speed, 4s) linear infinite alternate;
+}
+
+.star-border::after {
+  top: -12px;
+  left: -250%;
+  animation: star-move-top var(--star-speed, 4s) linear infinite alternate;
+}
+
+.star-border-inner {
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+}
+
+@keyframes star-move-bottom {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes star-move-top {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+/* ---------- Terminal 行高亮扫过（§7.2） ---------- */
+.term-flash {
+  animation: term-line-flash 0.6s ease-out;
+  border-radius: 4px;
+}
+
+@keyframes term-line-flash {
+  from {
+    background-color: var(--brand-soft);
+  }
+
+  to {
+    background-color: transparent;
+  }
 }
 
 /* ---------- Scroll progress bar (§7.2) ---------- */

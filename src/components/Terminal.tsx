@@ -122,6 +122,8 @@ export default function Terminal({
   }, [started, linesKey]);
 
   const done = pos.li >= lines.length;
+  // 刚完成行（当前行上一行）触发一次品牌色高亮扫过（§7.2 代码行高亮扫过）
+  const flashLi = !done && pos.ch === 0 ? pos.li - 1 : -1;
 
   return (
     <div ref={rootRef} className={`term-panel ${className}`}>
@@ -148,7 +150,10 @@ export default function Terminal({
           const partial = isTyping ? line.text.slice(0, pos.ch) : undefined;
           const showCursor = isTyping || (done && i === lines.length - 1);
           return (
-            <div key={i} className="flex items-baseline">
+            <div
+              key={i}
+              className={`flex items-baseline ${i === flashLi ? "term-flash" : ""}`}
+            >
               <Line line={line} partial={partial} />
               {showCursor && <span className="term-cursor" />}
             </div>

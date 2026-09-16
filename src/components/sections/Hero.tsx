@@ -1,5 +1,8 @@
 import { useTranslations } from "next-intl";
+import CursorGrid from "@/components/CursorGrid";
+import HeroWaves from "@/components/HeroWaves";
 import Reveal from "@/components/Reveal";
+import StarBorder from "@/components/StarBorder";
 import StatsBar from "@/components/sections/StatsBar";
 import Terminal, { type TermLine } from "@/components/Terminal";
 import type { StatItem } from "@/types";
@@ -17,10 +20,17 @@ export default function Hero() {
 
   return (
     <section className="relative overflow-hidden pb-20 pt-32 md:pb-28 md:pt-44">
-      {/* Engineering grid + glow orbs */}
-      <div className="bg-grid absolute inset-0 [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black_35%,transparent_100%)]" />
-      <div className="glow-orb -top-24 right-[12%] h-72 w-72" />
-      <div className="glow-orb glow-orb--lims left-[-60px] top-[240px] h-64 w-64 opacity-70" />
+      {/* GradientWaves 波浪底 + Engineering grid（网格叠在波浪上保留工程纹理）
+          底部必须用 mask 淡出：着色器里 alpha = fogDepth/dist，近处全不透明，
+          容器底边会切出一条硬边。 */}
+      <div className="absolute inset-x-0 top-0 h-[600px] [mask-image:linear-gradient(to_bottom,black_58%,transparent_100%)] md:h-[820px]">
+        <HeroWaves />
+      </div>
+      {/* 静态格线（CSS，含 60s 漂移）打底，光标点亮层叠在上面共用同一层 mask */}
+      <div className="absolute inset-0 [mask-image:radial-gradient(ellipse_65%_55%_at_50%_0%,black_35%,transparent_100%)]">
+        <div className="bg-grid absolute inset-0" />
+        <CursorGrid />
+      </div>
 
       <div className="container-x relative">
         <div className="mx-auto max-w-3xl text-center">
@@ -34,7 +44,7 @@ export default function Hero() {
           <Reveal delay={80}>
             <h1 className="mt-6 text-balance text-4xl font-bold leading-[1.15] tracking-tight text-fg md:text-6xl">
               {t("titleLead")}
-              <span className="text-gradient">{t("titleGradient")}</span>
+              <span className="text-shine">{t("titleGradient")}</span>
             </h1>
           </Reveal>
 
@@ -46,9 +56,11 @@ export default function Hero() {
 
           <Reveal delay={240}>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <a href={DEMO_MAILTO} className="btn-primary">
-                {tCta("bookDemo")}
-              </a>
+              <StarBorder>
+                <a href={DEMO_MAILTO} className="btn-primary">
+                  {tCta("bookDemo")}
+                </a>
+              </StarBorder>
               <a href="#products" className="btn-secondary">
                 {tCta("learnMore")}
               </a>

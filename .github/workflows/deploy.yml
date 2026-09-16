@@ -25,7 +25,9 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          # 24 自带 npm 11；package-lock.json 是由 npm 11 生成的，
+          # npm 10 的 ci 校验会误判可选 peer 依赖（@swc/helpers）缺失
+          node-version: 24
           cache: npm
           cache-dependency-path: package-lock.json
       - name: Install dependencies

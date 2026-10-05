@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import { useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 
-export const DEMO_EMAIL = "hello@looplooptech.com";
+export const DEMO_EMAIL = "info@looplooptech.com";
 export const DEMO_PHONE = "+86 188-5393-6112";
 export const DEMO_TEL = "tel:+8618853936112";
 

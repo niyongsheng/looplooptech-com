@@ -36,4 +36,4 @@ export function SectionHeading({
   );
 }
 
-export const DEMO_MAILTO = "mailto:hello@looplooptech.com";
+export const DEMO_MAILTO = "mailto:info@looplooptech.com";

@@ -22,10 +22,10 @@ export default function Footer() {
               {t("tagline")}
             </p>
             <a
-              href="mailto:hello@looplooptech.com"
+              href="mailto:info@looplooptech.com"
               className="mt-4 inline-block font-mono text-[13px] text-brand transition-colors hover:text-brand-hover"
             >
-              hello@looplooptech.com
+              info@looplooptech.com
             </a>
           </div>
 
@@ -42,8 +42,8 @@ export default function Footer() {
             title={t("columns.company.title")}
             links={[
               { label: t("columns.company.about"), href: "/about" },
-              { label: t("columns.company.careers"), href: "mailto:hello@looplooptech.com" },
-              { label: t("columns.company.contact"), href: "mailto:hello@looplooptech.com" },
+              { label: t("columns.company.careers"), href: "mailto:info@looplooptech.com" },
+              { label: t("columns.company.contact"), href: "mailto:info@looplooptech.com" },
             ]}
           />
           <FooterCol

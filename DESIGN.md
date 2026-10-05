@@ -153,8 +153,24 @@
 
 - Logo（SVG 内联，继承 `currentColor`）+ 主导航（产品▾、解决方案、关于、文档）+ 右侧语言切换 + 主题切换 + CTA 按钮。
 - 语言切换：`EN / 中` 下拉，选中项品牌色；切换后路由保持对应前缀（`/en/...` ↔ `/zh/...`）。
-- 主题切换：太阳/月亮图标按钮，过渡 200ms，遵循系统偏好为默认值。
-- 移动端：汉堡菜单展开全屏抽屉，含语言与主题切换。
+- 主题切换：太阳/月亮图标按钮，过渡 200ms，**默认暗色**（首次访问未手动切换时），手动切换后用 localStorage 持久化。
+- 预约演示：点击打开右侧抽屉（`DemoDrawer`，经 portal 挂到 body 以避开 header 的 backdrop-blur 包含块），内含邮箱（mailto）与电话（tel:+8618853936112）两个联系选项；Esc / 遮罩 / X 关闭，打开时锁定页面滚动、焦点移入面板，关闭后归还触发按钮。
+- 移动端：汉堡菜单展开全屏抽屉，含语言与主题切换；移动菜单内的预约演示会先收起菜单再打开抽屉。
+
+### 6.6 联系方式芯片（可复制）
+
+- 用途：无法点击跳转的账号类联系方式（QQ、微信），点击一键复制到剪贴板（`src/components/CopyValue.tsx`）。
+- 样式：等宽字体 `label`（`text-fg-faint`）+ `value`，h-9 圆角边框芯片，hover 时边框转品牌色并浮现复制图标；复制成功后图标变为品牌色 ✓，1.6s 后复原。
+- 无障碍：按钮 `aria-label` 读作「复制 QQ: …」，`aria-live` 播报「已复制」；剪贴板不可用时静默降级（文本仍可手动选中）。
+- 位置：关于页联系卡片（邮箱主按钮下方）。新增渠道只需在 `about.contact.channels` 增加 `{ label, value }`。
+
+### 6.7 视频演示区
+
+- 用途：产品页嵌入 B 站演示视频（`src/components/sections/VideoSection.tsx`），位于技术架构与 CTA 之间，`id="videos"`。
+- 数据：BVID 与原始中文标题集中在 `src/data/product-videos.ts`，中英文站点共用；分节文案在 messages 的 `<product>.video` 命名空间（en 的 note 标注「Demo videos are in Chinese」）。
+- 布局：宽屏为「播放器 + 右侧剧集列表」，列表用 `absolute inset-0` 与播放器面板等高、内部滚动；小屏列表移至播放器下方并限高 320px；仅 1 个视频时居中单播放器（max-w-3xl）。
+- 剧集切换：点击列表项切换 iframe `src`（`key` 重挂载），激活项左侧 2px accent 边框 + 编号 accent 色；同一时刻仅加载当前视频（iframe `loading="lazy"`）。
+- 合规：iframe 标记 `data-cookieconsent="marketing"`，由 Cookiebot 按类别放行（如需改归类，调整该属性值）。
 
 ---
 
@@ -208,12 +224,15 @@
   Hero + 终端演示
   功能矩阵（入库/出库/库存/盘点/波次/报表）
   技术架构（开放 API、多仓、条码/RFID）
+  视频演示（B 站单视频，居中播放器）
   指标 + CTA
 /zh/lims  /en/lims    → LIMS 产品页
-  同构，主题 accent 换为堇紫，功能矩阵换为（样品/检测/仪器/质控/报告/合规）
+  同构，主题 accent 换为堇紫，功能矩阵换为（样品/检测/仪器/质控/报告/合规），视频为 14 集（播放器 + 剧集列表）
 /zh/icms  /en/icms    → ICMS 产品页
-  同构，主题 accent 换为琥珀，功能矩阵换为（房产/门禁/停车/收费/工单/公告）
+  同构，主题 accent 换为琥珀，功能矩阵换为（房产/门禁/停车/收费/工单/公告），视频为 B 站单视频
 /zh/about  /en/about  → 关于我们（itsalin 式极简单栏）
+/zh/privacy  /en/privacy  → 隐私政策（单栏长文，编号章节）
+/zh/terms  /en/terms  → 服务条款（单栏长文，编号章节）
 ```
 
 文案调性：中文克制专业、不堆形容词；英文简句主动语态。所有文案集中在 i18n 资源文件，禁止硬编码于组件。
@@ -226,7 +245,7 @@
 | --- | --- |
 | 框架 | Next.js（App Router）+ TypeScript |
 | 样式 | Tailwind CSS + CSS Variables（主题色全部走变量，`dark` class 切换） |
-| 主题 | `next-themes`（系统默认 + 手动覆盖，localStorage 持久化） |
+| 主题 | `next-themes`（默认暗色 + 手动覆盖，localStorage 持久化） |
 | 国际化 | `next-intl`（`/zh`、`/en` 路由前缀，Cookie 记忆） |
 | 动效 | CSS 为主；复杂编排用 `motion`（framer-motion）；滚动触发用 `IntersectionObserver` 封装 `<Reveal>` 组件 |
 | 图标 | `lucide-react`（线性 1.5px，与 Logo 描边语言一致） |

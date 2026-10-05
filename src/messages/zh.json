@@ -44,6 +44,15 @@
     "theme": "切换主题",
     "menu": "菜单"
   },
+  "demo": {
+    "title": "预约演示",
+    "desc": "选一个你方便的方式联系我们，我们通常在一个工作日内回复。",
+    "emailLabel": "邮箱联系",
+    "emailDesc": "附上你的业务场景，我们会带着方案回复",
+    "phoneLabel": "直接打电话",
+    "phoneDesc": "工作日 9:00–18:00（北京时间）",
+    "close": "关闭"
+  },
   "common": {
     "learnMore": "了解更多",
     "bookDemo": "预约演示",

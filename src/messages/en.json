@@ -44,6 +44,15 @@
     "theme": "Toggle theme",
     "menu": "Menu"
   },
+  "demo": {
+    "title": "Book a demo",
+    "desc": "Pick whichever channel suits you — we usually reply within one business day.",
+    "emailLabel": "Email us",
+    "emailDesc": "Share your use case and we will come back with a plan",
+    "phoneLabel": "Call us directly",
+    "phoneDesc": "Weekdays 9:00–18:00 (GMT+8)",
+    "close": "Close"
+  },
   "common": {
     "learnMore": "Learn more",
     "bookDemo": "Book a demo",

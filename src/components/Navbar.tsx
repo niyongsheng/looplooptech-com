@@ -2,19 +2,21 @@
 
 import { Building2, ChevronDown, FlaskConical, Menu, Warehouse, X } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import DemoDrawer from "@/components/DemoDrawer";
 import LocaleSwitch from "@/components/LocaleSwitch";
 import LogoMark from "@/components/LogoMark";
 import ThemeToggle from "@/components/ThemeToggle";
 import { Link, usePathname } from "@/i18n/navigation";
-
-const DEMO_MAILTO = "mailto:hello@looplooptech.com";
 
 export default function Navbar() {
   const t = useTranslations("nav");
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [demoOpen, setDemoOpen] = useState(false);
+
+  const closeDemo = useCallback(() => setDemoOpen(false), []);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -131,9 +133,13 @@ export default function Navbar() {
             <LocaleSwitch />
           </div>
           <ThemeToggle />
-          <a href={DEMO_MAILTO} className="btn-primary hidden md:inline-flex">
+          <button
+            type="button"
+            onClick={() => setDemoOpen(true)}
+            className="btn-primary hidden md:inline-flex"
+          >
             {t("cta")}
-          </a>
+          </button>
           <button
             type="button"
             aria-label={t("menu")}
@@ -200,12 +206,22 @@ export default function Navbar() {
           </Link>
           <div className="mt-4 flex items-center gap-3 px-3">
             <LocaleSwitch />
-            <a href={DEMO_MAILTO} className="btn-primary flex-1">
+            <button
+              type="button"
+              onClick={() => {
+                setMobileOpen(false);
+                setDemoOpen(true);
+              }}
+              className="btn-primary flex-1"
+            >
               {t("cta")}
-            </a>
+            </button>
           </div>
         </nav>
       </div>
+
+      {/* 预约演示抽屉（portal 到 body，见 DemoDrawer） */}
+      <DemoDrawer open={demoOpen} onClose={closeDemo} />
     </header>
   );
 }

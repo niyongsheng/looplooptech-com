@@ -57,8 +57,8 @@ export default function Footer() {
           <FooterCol
             title={t("columns.legal.title")}
             links={[
-              { label: t("columns.legal.privacy"), href: "#" },
-              { label: t("columns.legal.terms"), href: "#" },
+              { label: t("columns.legal.privacy"), href: "/privacy" },
+              { label: t("columns.legal.terms"), href: "/terms" },
             ]}
           />
         </div>

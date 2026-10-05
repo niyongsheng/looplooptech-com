@@ -8,5 +8,10 @@ export type TestimonialItem = {
   company: string;
 };
 export type ArchItem = { tag: string; title: string; desc: string };
+export type LegalSectionItem = {
+  title: string;
+  paragraphs: string[];
+  bullets?: string[];
+};
 
 export type Accent = "brand" | "wms" | "lims" | "icms";

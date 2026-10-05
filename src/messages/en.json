@@ -19,6 +19,14 @@
     "about": {
       "title": "About us — LoopLoopTech",
       "description": "LoopLoopTech is ai native company focused on warehouse, lab and smart community digitization. We believe great software should run and evolve like a loop."
+    },
+    "privacy": {
+      "title": "Privacy Policy — LoopLoopTech",
+      "description": "How LoopLoopTech collects, uses, stores, shares and protects information, and the rights you have."
+    },
+    "terms": {
+      "title": "Terms of Service — LoopLoopTech",
+      "description": "Terms governing the use of the LoopLoopTech website and products including WMS, LIMS and ICMS."
     }
   },
   "nav": {
@@ -646,6 +654,219 @@
       "title": "Tell us about your business",
       "desc": "Whether it is one lab, one warehouse, or a supply chain network across continents — we would love to hear your story.",
       "email": "hello@looplooptech.com"
+    }
+  },
+  "legal": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "updated": "Last updated: October 5, 2026",
+      "lead": "LoopLoopTech (\"we\", \"us\") understands how important your personal information is. This policy explains how we collect, use, store, share and protect information when you use our website and products such as WMS, LIMS and ICMS, and the rights you have.",
+      "sections": [
+        {
+          "title": "Scope",
+          "paragraphs": [
+            "This policy applies to the LoopLoopTech website (www.looplooptech.com) and our software services, including WMS, LIMS and ICMS.",
+            "Where your organization is our customer, we generally act as a data processor and handle data in your business systems on the customer's instructions, as governed by our data processing agreement. This policy also describes our general security practices in that role."
+          ]
+        },
+        {
+          "title": "Information We Collect",
+          "paragraphs": [
+            "We follow the principle of data minimization and collect only what is necessary to provide our services:"
+          ],
+          "bullets": [
+            "Account and contact information: name, company, email address, phone number;",
+            "Usage and log information: sign-in time, IP address, browser and device type, activity records;",
+            "Communication information: details you provide when booking a demo or contacting support;",
+            "Cookies and similar technologies: used to keep you signed in and remember your language and theme preferences."
+          ]
+        },
+        {
+          "title": "How We Use Information",
+          "paragraphs": [
+            "We use the information we collect only for the purposes below, and not for unrelated purposes; if we ever need to use it beyond this policy, we will ask for your consent:"
+          ],
+          "bullets": [
+            "Provide, maintain and improve our products and services;",
+            "Authenticate accounts, provide support and troubleshoot;",
+            "Keep services secure and prevent fraud and abuse;",
+            "Send service notices, security alerts and, with your consent, product updates;",
+            "Meet legal and regulatory obligations."
+          ]
+        },
+        {
+          "title": "Cookies and Similar Technologies",
+          "paragraphs": [
+            "We use essential cookies to keep you signed in and to protect the service, and preference cookies to remember your language and theme choices.",
+            "You can manage or delete cookies in your browser settings; disabling essential cookies may affect some features."
+          ]
+        },
+        {
+          "title": "Sharing and Disclosure",
+          "paragraphs": [
+            "We do not sell your personal information. We share information only in these cases:"
+          ],
+          "bullets": [
+            "With your explicit consent or authorization;",
+            "With service providers acting on our instructions (such as cloud hosting and email or SMS providers), who may process it only as we direct;",
+            "When required by law or by a lawful request from a judicial or administrative authority;",
+            "As part of a merger, acquisition or asset transfer, where we will notify you in advance and require the recipient to honor this policy."
+          ]
+        },
+        {
+          "title": "Storage and Security",
+          "paragraphs": [
+            "We protect your information with technical and organizational measures including encryption in transit and at rest, fine-grained access control and audit logs.",
+            "We keep personal information only as long as necessary for the purposes described in this policy, unless the law requires otherwise."
+          ]
+        },
+        {
+          "title": "International Transfers",
+          "paragraphs": [
+            "Our services may use cloud infrastructure in different regions. Where personal information is transferred outside your jurisdiction, we comply with applicable law, for example by obtaining consent or entering into standard contractual clauses."
+          ]
+        },
+        {
+          "title": "Your Rights",
+          "paragraphs": [
+            "To the extent permitted by applicable law, you may access, copy, correct or delete the personal information we hold about you, withdraw consent, or close your account.",
+            "You can exercise these rights by writing to hello@looplooptech.com. We will respond within the period required by law."
+          ]
+        },
+        {
+          "title": "Minors",
+          "paragraphs": [
+            "Our products and services are built for businesses and organizations, not for minors. We do not knowingly collect personal information from minors and will delete it promptly if we learn we have."
+          ]
+        },
+        {
+          "title": "Changes to This Policy",
+          "paragraphs": [
+            "We may update this policy from time to time. For material changes we will notify you by a notice on the website or by email, and update the date at the top of this page. Continuing to use our services means you accept the updated policy."
+          ]
+        },
+        {
+          "title": "Contact Us",
+          "paragraphs": [
+            "If you have questions, comments or complaints about this policy, contact us at hello@looplooptech.com."
+          ]
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "updated": "Last updated: October 5, 2026",
+      "lead": "These Terms of Service (\"Terms\") form an agreement between you and LoopLoopTech for the use of our website and products such as WMS, LIMS and ICMS. Please read them carefully before use.",
+      "sections": [
+        {
+          "title": "Acceptance of Terms",
+          "paragraphs": [
+            "By visiting our website or using our services, you confirm that you have read, understood and agreed to be bound by these Terms. If you accept on behalf of a company or other organization, you represent that you are authorized to do so.",
+            "If you do not agree with any part of these Terms, please stop using our services."
+          ]
+        },
+        {
+          "title": "The Services",
+          "paragraphs": [
+            "We provide enterprise software services including WMS (warehouse management), LIMS (laboratory information management) and ICMS (smart community management). The specific features, service levels and support scope are governed by the order form or service agreement signed by both parties.",
+            "We may offer free trials. Trial services are provided \"as is\" and we may adjust or end a trial within reason."
+          ]
+        },
+        {
+          "title": "Accounts and Security",
+          "paragraphs": [
+            "You must provide true, accurate and complete registration information, and keep it up to date.",
+            "You are responsible for safeguarding your credentials and for all activity under your account. Please notify us immediately if you suspect unauthorized use."
+          ]
+        },
+        {
+          "title": "Acceptable Use",
+          "paragraphs": [
+            "You agree to comply with applicable law when using the services, and not to:"
+          ],
+          "bullets": [
+            "Use the services unlawfully or infringe the rights of others;",
+            "Access, disrupt or damage our systems, networks or data without authorization;",
+            "Reverse engineer or decompile the services, scrape data, or circumvent technical limits;",
+            "Upload malicious code or use the services to send spam;",
+            "Resell, sublicense or provide the services to unauthorized third parties without written permission."
+          ]
+        },
+        {
+          "title": "Fees and Payment",
+          "paragraphs": [
+            "Fees, billing cycles and payment methods for paid services are set out in the order form. Except where required by law or otherwise agreed, payments are non-refundable.",
+            "If you fail to pay on time, we may suspend or terminate the affected services."
+          ]
+        },
+        {
+          "title": "Intellectual Property",
+          "paragraphs": [
+            "We and our licensors retain all intellectual property rights in the services, software and documentation. You receive no rights other than the use rights expressly granted in these Terms.",
+            "You retain all rights to the data you upload or enter into the services, and grant us a license to process it as necessary to provide the services."
+          ]
+        },
+        {
+          "title": "Customer Data and Privacy",
+          "paragraphs": [
+            "You are responsible for ensuring that business data you upload to the services (including any personal information in it) is lawfully obtained and that you hold the necessary authorizations.",
+            "We process your data in accordance with our Privacy Policy and any data processing agreement between us."
+          ]
+        },
+        {
+          "title": "Confidentiality",
+          "paragraphs": [
+            "Confidential information one party receives from the other may be used only as necessary to perform these Terms, and must be protected with reasonable care. This does not apply where disclosure is required by law."
+          ]
+        },
+        {
+          "title": "Availability and Changes",
+          "paragraphs": [
+            "We will use commercially reasonable efforts to keep the services available, and may perform scheduled maintenance with advance notice where possible.",
+            "We may keep improving the services by adding, changing or retiring features; we will give advance notice of material changes."
+          ]
+        },
+        {
+          "title": "Disclaimer",
+          "paragraphs": [
+            "To the maximum extent permitted by law, the services are provided \"as is\" and \"as available\", without warranties of any kind, express or implied, including merchantability, fitness for a particular purpose and non-infringement.",
+            "We do not guarantee that the services will be uninterrupted or error-free, or that no data will be lost; please keep your own backups of important data."
+          ]
+        },
+        {
+          "title": "Limitation of Liability",
+          "paragraphs": [
+            "To the maximum extent permitted by law, neither party is liable for indirect, incidental, special, punitive or consequential damages, including lost profits, data or goodwill.",
+            "Our aggregate liability for all claims under these Terms will not exceed the service fees you paid us in the twelve months before the claim arose."
+          ]
+        },
+        {
+          "title": "Suspension and Termination",
+          "paragraphs": [
+            "We may suspend or terminate your services if you materially breach these Terms and fail to remedy within a reasonable period, or if you fail to pay fees when due.",
+            "After termination, please export your data within a reasonable period. Once that period ends, we will delete or anonymize the data in accordance with our Privacy Policy and data processing agreement."
+          ]
+        },
+        {
+          "title": "Changes to These Terms",
+          "paragraphs": [
+            "We may revise these Terms from time to time. We will notify you of material changes by a notice on the website or by email; continuing to use the services after changes take effect means you accept the revised Terms."
+          ]
+        },
+        {
+          "title": "Governing Law and Disputes",
+          "paragraphs": [
+            "These Terms are governed by the laws of the People's Republic of China.",
+            "The parties will try to resolve any dispute arising from these Terms through friendly negotiation; if that fails, either party may bring the dispute before a competent court."
+          ]
+        },
+        {
+          "title": "Contact Us",
+          "paragraphs": [
+            "If you have questions about these Terms, contact us at hello@looplooptech.com."
+          ]
+        }
+      ]
     }
   },
   "footer": {

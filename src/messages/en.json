@@ -368,6 +368,12 @@
           "desc": "Compatible with mainstream PDA, printing and RFID protocols. Legacy devices onboard smoothly."
         }
       ]
+    },
+    "video": {
+      "eyebrow": "Video",
+      "title": "wms2.0 hands-on demo",
+      "desc": "A recorded walkthrough of the full inbound-to-outbound flow.",
+      "note": "Demo videos are in Chinese and hosted on Bilibili."
     }
   },
   "lims": {
@@ -489,6 +495,12 @@
           "desc": "A full operation timeline, replayable by user, sample or time window."
         }
       ]
+    },
+    "video": {
+      "eyebrow": "Video",
+      "title": "The complete LIMS demo series",
+      "desc": "An 11-episode tutorial from overview to sampling, QC and report issuance, plus AI Agent and e-record demos.",
+      "note": "Demo videos are in Chinese and hosted on Bilibili."
     }
   },
   "icms": {
@@ -614,6 +626,12 @@
           "desc": "Standard integrations with smart city platforms, payment and OA systems — data always accessible."
         }
       ]
+    },
+    "video": {
+      "eyebrow": "Video",
+      "title": "ICMS solution demo",
+      "desc": "A walkthrough of the smart-community hardware + software solution.",
+      "note": "Demo videos are in Chinese and hosted on Bilibili."
     }
   },
   "about": {

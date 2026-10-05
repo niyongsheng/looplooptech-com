@@ -4,6 +4,7 @@ import ArchitectureSection from "@/components/sections/ArchitectureSection";
 import CtaSection from "@/components/sections/CtaSection";
 import FeatureGrid from "@/components/sections/FeatureGrid";
 import ProductHero from "@/components/sections/ProductHero";
+import VideoSection from "@/components/sections/VideoSection";
 
 export async function generateMetadata({
   params,
@@ -28,6 +29,7 @@ export default async function WmsPage({
       <ProductHero product="wms" />
       <FeatureGrid ns="wms.features" accent="wms" id="features" />
       <ArchitectureSection ns="wms.architecture" accent="wms" />
+      <VideoSection product="wms" accent="wms" />
       <CtaSection />
     </>
   );

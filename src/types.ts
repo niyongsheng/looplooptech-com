@@ -13,5 +13,6 @@ export type LegalSectionItem = {
   paragraphs: string[];
   bullets?: string[];
 };
+export type ProductVideo = { bvid: string; title: string };
 
 export type Accent = "brand" | "wms" | "lims" | "icms";

@@ -4,6 +4,7 @@ import ArchitectureSection from "@/components/sections/ArchitectureSection";
 import CtaSection from "@/components/sections/CtaSection";
 import FeatureGrid from "@/components/sections/FeatureGrid";
 import ProductHero from "@/components/sections/ProductHero";
+import VideoSection from "@/components/sections/VideoSection";
 
 export async function generateMetadata({
   params,
@@ -28,6 +29,7 @@ export default async function LimsPage({
       <ProductHero product="lims" />
       <FeatureGrid ns="lims.features" accent="lims" id="features" />
       <ArchitectureSection ns="lims.architecture" accent="lims" />
+      <VideoSection product="lims" accent="lims" />
       <CtaSection />
     </>
   );

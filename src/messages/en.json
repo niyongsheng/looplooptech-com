@@ -671,7 +671,11 @@
       "eyebrow": "Contact",
       "title": "Tell us about your business",
       "desc": "Whether it is one lab, one warehouse, or a supply chain network across continents — we would love to hear your story.",
-      "email": "hello@looplooptech.com"
+      "email": "hello@looplooptech.com",
+      "channels": [
+        { "label": "QQ", "value": "2196749319" },
+        { "label": "WeChat", "value": "looplooptech" }
+      ]
     }
   },
   "legal": {

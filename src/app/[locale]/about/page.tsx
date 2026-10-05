@@ -3,7 +3,9 @@ import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Icon from "@/components/Icon";
+import CopyValue from "@/components/CopyValue";
 import Reveal from "@/components/Reveal";
+import type { ContactChannelItem } from "@/types";
 
 export async function generateMetadata({
   params,
@@ -33,6 +35,7 @@ function AboutContent() {
   const t = useTranslations("about");
   const sections = t.raw("sections") as Section[];
   const values = t.raw("values.items") as Value[];
+  const channels = t.raw("contact.channels") as ContactChannelItem[];
 
   return (
     <section className="relative overflow-hidden pb-24 pt-32 md:pt-44">
@@ -100,13 +103,21 @@ function AboutContent() {
             <p className="mx-auto mt-3 max-w-md leading-relaxed text-fg-muted">
               {t("contact.desc")}
             </p>
-            <a
-              href={`mailto:${t("contact.email")}`}
-              className="btn-primary mt-7"
-            >
-              <Mail className="h-4 w-4" />
-              {t("contact.email")}
-            </a>
+            <div className="mt-7 flex flex-col items-center gap-3">
+              <a href={`mailto:${t("contact.email")}`} className="btn-primary">
+                <Mail className="h-4 w-4" />
+                {t("contact.email")}
+              </a>
+              <div className="flex flex-wrap items-center justify-center gap-2.5">
+                {channels.map((channel) => (
+                  <CopyValue
+                    key={channel.label}
+                    label={channel.label}
+                    value={channel.value}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </Reveal>
       </div>

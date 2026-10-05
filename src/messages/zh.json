@@ -671,7 +671,11 @@
       "eyebrow": "联系我们",
       "title": "聊聊你的业务",
       "desc": "无论是一间实验室、一座仓库，还是分布全球的供应链网络，我们都乐意听听你的故事。",
-      "email": "hello@looplooptech.com"
+      "email": "hello@looplooptech.com",
+      "channels": [
+        { "label": "QQ", "value": "2196749319" },
+        { "label": "微信", "value": "looplooptech" }
+      ]
     }
   },
   "legal": {

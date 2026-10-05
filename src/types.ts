@@ -13,6 +13,7 @@ export type LegalSectionItem = {
   paragraphs: string[];
   bullets?: string[];
 };
+export type ContactChannelItem = { label: string; value: string };
 export type ProductVideo = { bvid: string; title: string };
 
 export type Accent = "brand" | "wms" | "lims" | "icms";

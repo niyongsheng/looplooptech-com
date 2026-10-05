@@ -1,7 +1,7 @@
 # looplooptech-com
 <img src="./logo.png" alt="logo" width="200" />
 
-[LoopLoopTech](www.looplooptech.com) 官网
+[LoopLoopTech](https://www.looplooptech.com) 官网
 
 ## 技术栈
 

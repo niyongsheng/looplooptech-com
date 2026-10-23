@@ -690,7 +690,7 @@
   "legal": {
     "privacy": {
       "title": "Privacy Policy",
-      "updated": "Last updated: October 5, 2026",
+      "updated": "Last updated: October 23, 2026",
       "lead": "LoopLoopTech (\"we\", \"us\") understands how important your personal information is. This policy explains how we collect, use, store, share and protect information when you use our website and products such as WMS, LIMS and ICMS, and the rights you have.",
       "sections": [
         {
@@ -709,7 +709,8 @@
             "Account and contact information: name, company, email address, phone number;",
             "Usage and log information: sign-in time, IP address, browser and device type, activity records;",
             "Communication information: details you provide when booking a demo or contacting support;",
-            "Cookies and similar technologies: used to keep you signed in and remember your language and theme preferences."
+            "Cookies and similar technologies: used to keep you signed in and remember your language and theme preferences;",
+            "Anonymous usage analytics: page views and navigation events collected through Aptabase without cookies, device identifiers or persistent user identification."
           ]
         },
         {
@@ -729,6 +730,7 @@
           "title": "Cookies and Similar Technologies",
           "paragraphs": [
             "We use essential cookies to keep you signed in and to protect the service, and preference cookies to remember your language and theme choices.",
+            "Website analytics is provided by Aptabase and does not use cookies or similar storage; the data cannot be used to identify you personally.",
             "You can manage or delete cookies in your browser settings; disabling essential cookies may affect some features."
           ]
         },
@@ -739,7 +741,7 @@
           ],
           "bullets": [
             "With your explicit consent or authorization;",
-            "With service providers acting on our instructions (such as cloud hosting and email or SMS providers), who may process it only as we direct;",
+            "With service providers acting on our instructions (such as cloud hosting, analytics, email and SMS providers), who may process it only as we direct;",
             "When required by law or by a lawful request from a judicial or administrative authority;",
             "As part of a merger, acquisition or asset transfer, where we will notify you in advance and require the recipient to honor this policy."
           ]

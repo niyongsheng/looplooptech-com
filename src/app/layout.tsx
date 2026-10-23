@@ -3,6 +3,7 @@ import Script from "next/script";
 import "@fontsource-variable/inter";
 import "@fontsource-variable/jetbrains-mono";
 import "./globals.css";
+import { AnalyticsProvider } from "@/components/AnalyticsProvider";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
 // 静态导出下 GitHub Pages 无服务端重定向，根路径 "/" 由 src/app/page.tsx 做客户端跳转，
@@ -20,7 +21,9 @@ export default function RootLayout({
   return (
     <html lang="zh-CN" suppressHydrationWarning>
       <body className="min-h-screen antialiased">
-        <ThemeProvider>{children}</ThemeProvider>
+        <AnalyticsProvider>
+          <ThemeProvider>{children}</ThemeProvider>
+        </AnalyticsProvider>
         {/* Cookiebot 同意管理：auto 模式需在首屏第三方脚本之前于 <head> 加载 */}
         <Script
           id="Cookiebot"

@@ -9,6 +9,7 @@
 - Tailwind CSS v4 + CSS Variables 双主题
 - next-intl（`/zh`、`/en` 路由前缀国际化）
 - next-themes（暗黑模式，跟随系统 + 手动切换）
+- Aptabase（无 Cookie 匿名访问统计）
 
 ## 本地开发
 

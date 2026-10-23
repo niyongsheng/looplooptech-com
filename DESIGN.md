@@ -172,6 +172,13 @@
 - 剧集切换：点击列表项切换 iframe `src`（`key` 重挂载），激活项左侧 2px accent 边框 + 编号 accent 色；同一时刻仅加载当前视频（iframe `loading="lazy"`）。
 - 合规：iframe 标记 `data-cookieconsent="marketing"`，由 Cookiebot 按类别放行（如需改归类，调整该属性值）。
 
+### 6.8 匿名使用统计
+
+- 用途：页面访问统计（`src/components/AnalyticsProvider.tsx`），使用 Aptabase（`@aptabase/react`）。App Key `A-US-9291316627` 为美国区数据节点；Key 会随静态站点公开，仅能写入事件，不能当作密钥。
+- 隐私：无 Cookie、无设备标识、无跨站追踪，Aptabase 不存储 IP 与个人数据，因此不接入 Cookiebot 的分类拦截。
+- 事件：`page_view`，属性 `path` 为含语言前缀的真实路径（如 `/zh/about/`）；`usePathname` 变化时上报一次，首屏与客户端路由切换都覆盖，根路径 `/` 仅做跳转故不计入。
+- 本地开发：SDK 自动把 `localhost` 事件标记为 Debug，不计入正式数据。
+
 ---
 
 ## 7. 动效规范（重点参考 DeepSeek Harness）
@@ -250,6 +257,7 @@
 | 动效 | CSS 为主；复杂编排用 `motion`（framer-motion）；滚动触发用 `IntersectionObserver` 封装 `<Reveal>` 组件 |
 | 图标 | `lucide-react`（线性 1.5px，与 Logo 描边语言一致） |
 | 字体 | `next/font` 加载 Inter + JetBrains Mono |
+| 统计 | Aptabase（`@aptabase/react`，无 Cookie 匿名事件，美国区节点） |
 
 组件文件全部为客户端可复用的服务端组件优先；仅交互组件（导航、终端、语言切换）标记 `"use client"`。
 
